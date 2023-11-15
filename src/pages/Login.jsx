@@ -42,7 +42,12 @@ const Login = () => {
   console.log(email, password);
 
   const handleLogin = async () => {
-    await createUserWithEmailAndPassword(auth, email, password);
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      navigate("/home");
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
@@ -51,21 +56,17 @@ const Login = () => {
       <button onClick={handleSignOut}>sign out</button>
 
       <div>
-        <form>
-          <input
-            type="email"
-            placeholder="Enter your Email"
-            onChange={handleEmailChange}
-          />
-          <input
-            type="password"
-            placeholder="enter Your password"
-            onChange={handlePasswordChange}
-          />
-          <button type="submit" onClick={handleLogin}>
-            Login
-          </button>
-        </form>
+        <input
+          type="email"
+          placeholder="Enter your Email"
+          onChange={handleEmailChange}
+        />
+        <input
+          type="password"
+          placeholder="enter Your password"
+          onChange={handlePasswordChange}
+        />
+        <button onClick={handleLogin}>Login</button>
       </div>
     </div>
   );
