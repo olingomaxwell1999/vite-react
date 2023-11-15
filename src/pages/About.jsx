@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { db } from "../config/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import Developer from "../Componets/Developer/Developer";
+import CreateDeveloper from "../Componets/CreateDeveloper/CreateDeveloper";
 const About = () => {
   const [developers, setDevelopers] = useState([]);
 
@@ -36,6 +37,8 @@ const About = () => {
           id={developer.id}
         />
       ))}
+
+      <CreateDeveloper />
     </div>
   );
 };
