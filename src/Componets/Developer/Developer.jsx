@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 const Developer = ({ name, age, married, id, profession }) => {
   return (
     <div>
@@ -6,6 +7,14 @@ const Developer = ({ name, age, married, id, profession }) => {
       <h3>{age}</h3>
     </div>
   );
+};
+
+Developer.propTypes = {
+  name: PropTypes.string,
+  age: PropTypes.number,
+  married: PropTypes.bool,
+  id: PropTypes.string,
+  profession: PropTypes.string,
 };
 
 export default Developer;

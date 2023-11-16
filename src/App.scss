@@ -1,0 +1,97 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --main-red: rgba(122,0,33,255);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.loginPageArea{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // gap: 20px;
+    background-color: var(--main-red);
+    height: 100vh;
+    color: #fff;
+
+    .loginSide{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 30px 40px;
+        width: 80%;
+        margin: auto;
+
+        .text-top{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            // padding-top: 20px;
+
+            h1{
+                font-weight: 400;
+                font-size: 30px;
+            }
+
+            h3{
+                font-weight: 300;
+                font-size: 20px;
+            }
+        }
+
+        .input-area{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            label{
+                font-size: 20px;
+                font-weight: 300;
+            }
+
+            input{
+                padding: 10px;
+                height: 50px;
+                border-radius: 10px;
+            }
+
+            .submitBtn{
+                height: 50px;
+                border-radius: 10px;
+                background-color: #fff;
+                color: var(--main-red);
+            }
+        }
+
+        .social-login{
+            display: flex;
+            margin: auto;
+            gap: 20px;
+
+            .social-icon{
+                font-size: 40px;
+                background-color: #fff;
+                color: var(--main-red);
+                padding: 10px;
+                border-radius: 50%;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+
+    .imgSide{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

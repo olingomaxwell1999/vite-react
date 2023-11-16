@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 // import FetchingData from "./Componets/FetchingData/FetchingData";
 import Navbar from "./Componets/Navbar/Navbar";
 // import State from "./Componets/State/State";
